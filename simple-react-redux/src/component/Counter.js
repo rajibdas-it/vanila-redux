@@ -48,10 +48,13 @@ const Counter = () => {
           count: c.count - 1,
         };
       }
+      return {
+        ...c,
+      };
     });
     setState(updateCounter);
   };
-  console.log(state);
+  //   console.log(state);
   return (
     <div class="p-4 h-auto flex flex-col items-center justify-center space-y-5 bg-white rounded shadow">
       <div class="text-2xl font-semibold" id="value">
